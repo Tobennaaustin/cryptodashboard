@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <!-- bottom nav -->
+
+    <div class="bottom-nav-container">
+        <nav class="bottom-nav">
+            <ul>
+                <li>
+                    <i class='bx  bx-home-alt'></i>
+                    <span>Home</span>
+                </li>
+                <li>
+                    <i class='bx  bx-swap-horizontal'></i>
+                    <span>Swap</span>
+                </li>
+                <li>
+                    <i class='bx  bx-wallet'></i>
+                    <span>Wallet</span>
+                </li>
+                <li>
+                    <i class='bx  bx-trending-down'></i>
+                    <span>Market</span>
+                </li>
+                <li>
+                    <i class='bx  bx-cog'></i>
+                    <span>Settings</span>
+                </li>
+            </ul>
+            </nav>
+    </div>
+
+    <!-- main content -->
+     <main>
+        <!-- profile section -->
+
+        <div class="profile-section">
+            <div class="profile-text">
+                <div class="profile-img">
+                    <img src="pic.jpeg" alt="">
+                </div>
+                <div class="profile-name">
+                    <h3>Welcome back, Tobenna</h3>
+                    <p>Your wallet</p>
+                </div>
+            </div>
+            <div class="profile-icons">
+                <div class="profile-icon">
+                    <i class='bx  bx-search'></i>
+                </div>
+
+                <div class="profile-icon">
+                    <i class='bx bx-bell'></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- wallet section -->
+         <div class="wallet-section">
+            <div class="wallet-header">
+                <div class="wallet-balance">
+                    <h2>Available Balance</h2>
+                    <img src="visa logo.png" alt="" width="50px">
+                </div>
+                
+                <div class="wallet-body">
+                    <p class="amount">$10,000.00</p>
+                    <p class="norm">PNL of the day <span>(+2.3%)</span></p>
+                </div>
+            </div>
+
+            <div class="wallet-footer">
+                <div class="wallet-bin">
+                    <p>**** **** **** 1234</p>
+                </div>
+                <div class="wallet-text">
+                    <p>Credit</p>
+                </div>
+            </div>
+         </div>
+
+         <!-- crypto section -->
+          <div class="crypto-section">
+            <div class="crypto-header">
+                <h2>Top Crypto</h2>
+                <p>See all</p>
+            </div>
+
+            <div class="crypto-body" id="crypto-container">
+
+                <div class="crypto-item">
+                    <div class="item-head">
+                        <div class="item-name">
+                            <img src="eth.svg" alt="">
+                            <div class="crypto-text">
+                                <h3>Ethereum</h3>
+                                <p>ETH</p>
+                            </div>
+                        </div>
+                        <div class="item-icon">
+                            <p id="eth-change"></p>
+                        </div>
+                    </div>
+                    
+                    <div class="item-body">
+                        <div class="item-text">
+                            <p>Latest price</p>
+                            <p id="eth-price"></p>
+                        </div>
+                        <div class="item-btn">
+                            <button>
+                                Buy
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+          </div>
+
+          <!-- quick actions section -->
+           <div class="quick-actions">
+            <div class="quick-header">
+                <h2>Quick Actions</h2>
+            </div>
+            
+            <div class="quick-body">
+                <div class="quick-item">
+                    <button>
+                        Send
+                        <i class='bx  bx-send'></i>
+                    </button>
+                </div>
+                <div class="quick-item">
+                    <button>
+                        Receive
+                        <i class='bx  bx-receipt'></i>
+                    </button>
+                </div>
+                <div class="quick-item">
+                    <button>
+                        Buy
+                        <i class='bx  bx-plus'></i>
+                    </button>
+                </div>
+                <div class="quick-item">
+                    <button>
+                        Swap
+                        <i class='bx  bx-swap-vertical'></i>
+                    </button>
+                </div>
+            </div>
+           </div>
+     </main>
+
+     <!-- transactions record -->
+
+     <section>
+        <div class="transactions-record">
+            <div class="transactions-header">
+                <h2>Transactions Record</h2>
+                <p>view all</p>
+            </div>
+
+            <div class="transaction-body">
+                <div class="transaction-item">
+                    <div class="transaction-text">
+                        <img src="bitcoin.png" alt="">
+                        <div class="txt">
+                            <p class="bold">Toby Maguire</p>
+                            <p class="simpl">July 22, 09:00 AM</p>
+                        </div>
+                    </div>
+                    <div class="transaction-amount">
+                        <p class="amount">- $1,000.00</p>
+                    </div>
+                </div>
+
+                <div class="transaction-item">
+                    <div class="transaction-text">
+                        <img src="eth.svg" alt="">
+                        <div class="txt">
+                            <p class="bold">Tobenna Teddy</p>
+                            <p class="simpl">July 22, 09:00 AM</p>
+                        </div>
+                    </div>
+                    <div class="transaction-amount">
+                        <p class="amount success">+ $1,000.00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </section>
+
+     <script src="index.js"></script>
+</body>
+</html>

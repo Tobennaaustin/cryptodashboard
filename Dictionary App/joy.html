@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Crypto Prices</title>
+</head>
+
+<body>
+    <h2>Bitcoin: <span id="btc-price"></span> (<span id="btc-change"></span>)</h2>
+    <h2>Ethereum: <span id="eth-price"></span> (<span id="eth-change"></span>)</h2>
+
+    <script>
+        async function getCryptoData() {
+            const btcRes = await fetch("https://api.coincap.io/v2/assets/bitcoin");
+            const ethRes = await fetch("https://api.coincap.io/v2/assets/ethereum");
+
+            const btcData = await btcRes.json();
+            const ethData = await ethRes.json();
+
+            document.getElementById("btc-price").textContent = `$${parseFloat(btcData.data.priceUsd).toFixed(2)}`;
+            document.getElementById("btc-change").textContent = `${parseFloat(btcData.data.changePercent24Hr).toFixed(2)}%`;
+
+            document.getElementById("eth-price").textContent = `$${parseFloat(ethData.data.priceUsd).toFixed(2)}`;
+            document.getElementById("eth-change").textContent = `${parseFloat(ethData.data.changePercent24Hr).toFixed(2)}%`;
+        }
+
+        getCryptoData();
+    </script>
+</body>
+
+</html>
