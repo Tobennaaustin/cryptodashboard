@@ -1,31 +1,140 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Crypto Prices</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bottom Nav</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="joy.css" />
 </head>
 
 <body>
-    <h2>Bitcoin: <span id="btc-price"></span> (<span id="btc-change"></span>)</h2>
-    <h2>Ethereum: <span id="eth-price"></span> (<span id="eth-change"></span>)</h2>
+    <!-- bottom nav -->
+    <div class="bottom-nav-container">
+        <nav class="bottom-nav">
+            <ul>
+                <li class="active">
+                    <i class='bx bx-home'></i>
+                </li>
+                <li>
+                    <i class='bx bx-bar-chart-square'></i>
+                </li>
+                <li>
+                    <i class='bx bx-wallet'></i>
+                </li>
+                <li>
+                    <i class='bx bx-user'></i>
+                </li>
+            </ul>
+        </nav>
+    </div>
 
-    <script>
-        async function getCryptoData() {
-            const btcRes = await fetch("https://api.coincap.io/v2/assets/bitcoin");
-            const ethRes = await fetch("https://api.coincap.io/v2/assets/ethereum");
+    <main>
+        <!-- profile section -->
+        <div class="profile-section">
+            <div class="profile-text">
+                <div class="profile-img">
+                    <img src="pic.jpeg" alt="" />
+                </div>
+                <div class="profile-name">
+                    <p>Welcome back</p>
+                    <h3>Tobenna</h3>
+                </div>
+            </div>
+            <div class="profile-icons">
+                <div class="profile-icon">
+                    <i class='bx bx-bell'></i>
+                </div>
+            </div>
+        </div>
 
-            const btcData = await btcRes.json();
-            const ethData = await ethRes.json();
 
-            document.getElementById("btc-price").textContent = `$${parseFloat(btcData.data.priceUsd).toFixed(2)}`;
-            document.getElementById("btc-change").textContent = `${parseFloat(btcData.data.changePercent24Hr).toFixed(2)}%`;
+        <!-- dashboard section -->
+         <div class="dashboard-section">
+            <div class="dash-head">
+                <p>Mocard</p>
+                <p>Add New Card</p>
+            </div>
 
-            document.getElementById("eth-price").textContent = `$${parseFloat(ethData.data.priceUsd).toFixed(2)}`;
-            document.getElementById("eth-change").textContent = `${parseFloat(ethData.data.changePercent24Hr).toFixed(2)}%`;
-        }
+            <div class="dash-body">
+                <div class="dash-body-head">
+                    <div class="body-text">
+                        <p>Your Balance</p>
+                        <h3>$ 100,000.00</h3>
+                    </div>
+                    <div class="body-icon">
+                        <img src="sim-card.png" alt="">
+                    </div>
+                </div>
 
-        getCryptoData();
-    </script>
+                <div class="dash-body-foot">
+                    <p>****9127</p>
+                    <img src="mastercard.png" alt="">
+                </div>
+            </div>
+
+            <div class="dash-foot">
+                <div class="foot-item">
+                    <i class='bx bx-transfer-alt'></i>
+                    <p>Send</p>
+                </div>
+                <div class="foot-item">
+                    <i class='bx bx-wallet'></i>
+                    <p>Top up</p>
+                </div>
+                <div class="foot-item">
+                    <i class='bx  bx-qr-scan'></i>
+                    <p>Scan</p>
+                </div>
+                <div class="foot-item">
+                    <i class='bx  bx-history'></i>
+                    <p>History</p>
+                </div>
+            </div>
+         </div>
+
+
+         <!-- Activity section -->
+         <div class="activity-section">
+            <div class="act-head">
+                <p>Recent Activity</p>
+                <p>See All</p>
+            </div>
+
+            <div class="act-container">
+                <div class="act-item">
+                    <div class="act-img">
+                        <div class="act-icon">
+                            <img src="dribbble.png" alt="">
+                        </div>
+                        <div class="act-text">
+                            <p>Dribbble</p>
+                            <p>40 Min ago</p>
+                        </div>
+                    </div>
+                    <div class="act-txt">
+                        <p>- $28.00</p>
+                    </div>
+                </div>
+                <div class="act-item">
+                    <div class="act-img">
+                        <div class="act-icon">
+                            <img src="apple.png" alt="">
+                        </div>
+                        <div class="act-text">
+                            <p>Dribbble</p>
+                            <p>40 Min ago</p>
+                        </div>
+                    </div>
+                    <div class="act-txt">
+                        <p>- $28.00</p>
+                    </div>
+                </div>
+            </div>
+         </div>
+    </main>
+     
 </body>
 
 </html>
